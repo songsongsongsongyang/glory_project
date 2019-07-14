@@ -9,7 +9,6 @@ var list=ulObj.children;
 var olObj=rotate.children[1];
 var arr=my$("arr");
 var imgWidth=rotate.offsetWidth;
-// var left=my$("left")      找的代码中并没有这一行，(・∀・(・∀・(・∀・*)))？
 var right=my$("right");
 var pic=0;
 //设置
@@ -22,11 +21,9 @@ for(var i=0;i<list.length;i++){
     olObj.appendChild(liObj);
     liObj.innerText=(i+1);
     liObj.setAttribute("index",i);
-
     //为按钮注册mouseover事件
     liObj.onmouseover=function () {
         //先清除所有按钮的样式
-
         for (var j=0;j<olObj.children.length;j++){
             olObj.children[j].removeAttribute("class");
         }
@@ -75,7 +72,7 @@ rotate.onmouseout=function () {
 right.onclick=leftMove;
 function leftMove() {
     if (pic == list.length - 1) {
-        pic = 0;//先设置pic=0
+        pic = 0;
         ulObj.style.left = 0 + "px";
     }
     pic++;
@@ -83,8 +80,9 @@ function leftMove() {
     if (pic == list.length - 1) {
         olObj.children[olObj.children.length - 1].className = "";
         olObj.children[0].className = "current";
-    } else {
-        //干掉所有的小按钮的背景颜色
+    } 
+    else {
+        //取消所有的小按钮的背景颜色
         for (var i = 0; i < olObj.children.length; i++) {
             olObj.children[i].removeAttribute("class");
         }
@@ -115,7 +113,6 @@ function animate(element, target) {
         //每次移动的距离
         var step = 10;
         step = current < target ? step : -step;
-        //当前移动到位置
         current += step;
         if (Math.abs(current - target) > Math.abs(step)) {
             element.style.left = current + "px";

@@ -52,7 +52,6 @@
 #rotate ul li{
     float: left;
 }
-
 #rotate ol {
     position: absolute;
     height: 20px;
@@ -126,7 +125,7 @@
     padding-bottom: 3px;
     border-bottom: 1px solid #CCC;
 }
-#newsHd ul li.active {      /*类选择器前不能有空格*/
+#newsHd ul li.active {
     padding: 0;
     border-bottom: 4px solid orange;
 }

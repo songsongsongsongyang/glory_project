@@ -20,7 +20,7 @@ li {
 }
 #nav {
 	float: right;
-	font-size: 0;                  /*取消浏览器默认间隔*/
+	font-size: 0;              /*取消浏览器默认间隔*/
 }
 #nav a {
 	font-size: 20px;

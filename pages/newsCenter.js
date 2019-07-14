@@ -10,10 +10,10 @@ window.onload=function(){
         liList[i].onmouseover=function(){
             for(var j=0;j<liList.length;j++){
                 liList[j].className=''; //循环清空li样式
-                myTab[j].style.display='none'; //循环隐藏所有div
+                myTab[j].style.display='none'; //循环隐藏所有ul
             }
             this.className='active'; //当前点击的元素样式变成active
-            myTab[this.index].style.display='block';  //this.index 获取当前li对应的索引
+            myTab[this.index].style.display='block';
         }
     }
 }
