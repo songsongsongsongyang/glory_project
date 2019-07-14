@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>荣耀</title>
+	<title>《荣耀》游戏</title>
 	<link href="header.css" rel="stylesheet" type="text/css">
+	<link href="main.css" rel="stylesheet" type="text/css">
+	<link href="footer.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<div id="container">
@@ -16,33 +18,167 @@
 					<a href="./date.html">游戏资料</a>
 					<a href="./contents.html">内容中心</a>
 					<a href="./match.html">赛事中心</a>
+					<a href="./service.html">用户服务</a>
 					<a href="./community.html">社区互动</a>
 				</p>
 			</div>
-			<div id="banner">
-		        <ul>
-		            <li><a href="#"><img src="../img/picture1.jpg" alt=""></a></li>
-		            <li><a href="#"><img src="../img/picture2.jpg" alt=""></a></li>
-		            <li><a href="#"><img src="../img/picture3.jpg" alt=""></a></li>
-		        </ul>
-		        <ol class="bar">
-		 			<!-- 根据li个数，创建小按钮 -->
-		        </ol>
-		        <!--左右焦点-->
-		        <div id="arr">
-		            <span id="left"><</span>
-		            <span id="right">></span>
-		        </div>
-		        <script type="text/javascript" src="banner.js"></script>
-		    </div>
 		</div>
-		<div id="main">
-			
+		<div id="wrapper">
+			<div id="bgContainer">
+				<div id="bg"></div>
+				<a href="#" id="bgLink" title="查看详情">查看详情</a>
+			</div>
+			<div id="main">				
+				<div id="rotate">
+			        <ul>
+			            <li><a href=""><img src="../img/picture1.jpg" alt=""></a></li>
+			            <li><a href=""><img src="../img/picture2.jpg" alt=""></a></li>
+			            <li><a href=""><img src="../img/picture3.jpg" alt=""></a></li>
+			        </ul>
+			        <ol class>
+			 			<!-- 根据li个数，创建小按钮 -->
+			        </ol>
+			        <!-- 左右焦点 -->
+			        <div id="arr">
+			            <span id="left"><</span>
+			            <span id="right">></span>
+			        </div>
+			        <script type="text/javascript" src="rotate.js"></script>
+			    </div>
+				<div id="newsCenter">
+					<div id="newsHd">
+						<ul>
+							<li class="active"><a href="">综合</a></li>
+							<li><a href="">公告</a></li>
+							<li><a href="">赛事</a></li>
+							<li><a href="">社区</a></li>
+							<li><a href="">媒体</a></li>
+						</ul>
+						<a id="tabMore" href="" title="更多">…</a>
+					</div>
+					<div id="newsBd">
+						<ul style="display: block;">
+							<!-- 综合 -->
+							<li class="newsHot"><a href="">胡润发布2017原创文学IP价值榜：《人民的名义》未能进入前10，第一名竟是</a></li>
+							<li><a href="">《全职高手》是蝴蝶蓝连载于起点中文网的网游小说</a><span>12-01</span></li>
+							<li><a href="">书名取自主角叶修是荣耀网游全职业精通的“全职高手”</a><span>12-01</span></li>
+							<li><a href="">故事讲述网游荣耀中被誉为教科书级别的顶尖高手叶修</a><span>12-01</span></li>
+							<li><a href="">因为种种原因遭到俱乐部的驱逐</a><span>12-01</span></li>
+							<li><a href="">离开职业圈的他寄身于一家网吧成了一个小小的网管</a><span>12-01</span></li>
+							<li><a href="">但是，拥有十年游戏经验的他，在荣耀新开的第十区重新投入了游戏</a><span>12-01</span></li>
+							<li><a href="">带着对往昔的回忆，和一把未完成的自制武器，开始了重返巅峰之路。</a><span>12-01</span></li>
+						</ul>
+						<ul style="display: none;">
+							<!-- 公告 -->
+							<li class="newsHot"><a href="">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</a></li>
+							<li><a href="">B1234567890</a><span>12-01</span></li>
+							<li><a href="">Bqwertyuiop</a><span>12-01</span></li>
+							<li><a href="">Basdfghjkl</a><span>12-01</span></li>
+							<li><a href="">Bzxcvbnm</a><span>12-01</span></li>
+							<li><a href="">B1234567890</a><span>12-01</span></li>
+							<li><a href="">Bqwertyuiop</a><span>12-01</span></li>
+							<li><a href="">Basdfghjkl;</a><span>12-01</span></li>
+						</ul>
+						<ul style="display: none;">
+							<!-- 赛事 -->
+							<li class="newsHot"><a href="">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</a></li>
+							<li><a href="">C1234567890</a><span>12-01</span></li>
+							<li><a href="">Cqwertyuiop</a><span>12-01</span></li>
+							<li><a href="">Casdfghjkl</a><span>12-01</span></li>
+							<li><a href="">Czxcvbnm</a><span>12-01</span></li>
+							<li><a href="">C1234567890</a><span>12-01</span></li>
+							<li><a href="">Cqwertyuiop</a><span>12-01</span></li>
+							<li><a href="">Casdfghjkl;</a><span>12-01</span></li>
+						</ul>
+						<ul style="display: none;">
+							<!-- 社区 -->
+							<li class="newsHot"><a href="">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</a></li>
+							<li><a href="">D1234567890</a><span>12-01</span></li>
+							<li><a href="">Dqwertyuiop</a><span>12-01</span></li>
+							<li><a href="">Dasdfghjkl</a><span>12-01</span></li>
+							<li><a href="">Dzxcvbnm</a><span>12-01</span></li>
+							<li><a href="">D1234567890</a><span>12-01</span></li>
+							<li><a href="">Dqwertyuiop</a><span>12-01</span></li>
+							<li><a href="">Dasdfghjkl;</a><span>12-01</span></li>
+						</ul>
+						<ul style="display: none;">
+							<!-- 媒体 -->
+							<li class="newsHot"><a href="">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</a></li>
+							<li><a href="">E1234567890</a><span>12-01</span></li>
+							<li><a href="">Eqwertyuiop</a><span>12-01</span></li>
+							<li><a href="">Easdfghjkl</a><span>12-01</span></li>
+							<li><a href="">Ezxcvbnm</a><span>12-01</span></li>
+							<li><a href="">E1234567890</a><span>12-01</span></li>
+							<li><a href="">Eqwertyuiop</a><span>12-01</span></li>
+							<li><a href="">Easdfghjkl;</a><span>12-01</span></li>
+						</ul>
+					</div>
+					<script type="text/javascript" src="newsCenter.js"></script>
+				</div>
+				<div id="downloadPannel">
+					<a href=""><img src="../img/download.png" alt=""></a>
+					<a href="" id="guide">新手指南</a>
+					<a href="" id="strategy">攻略视频</a>
+					<a href="" id="regist">注册</a>
+					<a href="" id="recharge">充值</a>
+				</div>
+			</div>
 		</div>
 		<div id="footer">
-			
+			<img src="../img/footerbg.jpg" alt="" id="footerbg">
+			<div id="footerWrapper">
+				<div id="links">
+					<p>友情链接</p>
+					<a href="">霸图</a>
+					<a href="">百花</a>
+					<a href="">贺武</a>
+					<a href="">呼啸</a>
+					<a href="">皇风</a>
+					<a href="">蓝雨</a>
+					<a href="">雷霆</a>
+					<a href="">临海</a>
+					<a href="">轮回</a>
+					<a href="">明青</a>
+					<a href="">轻裁</a>
+					<a href="">三零一度</a>
+					<a href="">神奇</a>
+					<a href="">微草</a>
+					<a href="">兴欣</a>
+					<a href="">虚空</a>
+					<a href="">烟雨</a>
+					<a href="">义斩</a>
+					<a href="">越云</a>
+					<a href="">昭华</a>
+				</div>
+				<ul id="cpright">
+					<li id="link_map">
+						<a href="">公司简介</a>
+						<span>丨</span>
+						<a href="">服务条款</a>
+						<span>丨</span>
+						<a href="">隐私保护</a>
+						<span>丨</span>
+						<a href="">游戏招聘</a>
+						<span>丨</span>
+						<a href="">用户协议</a>
+						<span>丨</span>
+						<a href="">商务合作</a>
+						<span>丨</span>
+						<a href="">相关法律</a>
+					</li>
+					<li id="txt">
+						<p>抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+						<p>本网络游戏适合16岁及以上的用户使用；为了您的健康，请合理控制游戏时间。</p>
+					</li>
+					<li id="copyright_zh">
+						<p>荣耀公司版权所有</p>
+						<p>COPYRIGHT © 2015 - 2025 GLORY. ALL RIGHTS RESERVED.</p>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
+<!-- 复查，注释 -->

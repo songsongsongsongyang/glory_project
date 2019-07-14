@@ -3,12 +3,12 @@ function my$(id) {
 }
 
 //获取各元素，方便操作
-var banner=my$("banner");
-var ulObj=banner.children[0];
+var rotate=my$("rotate");
+var ulObj=rotate.children[0];
 var list=ulObj.children;
-var olObj=banner.children[1];
+var olObj=rotate.children[1];
 var arr=my$("arr");
-var imgWidth=banner.offsetWidth+1;  //不知道为什么offsetWidth比图片宽度少1个像素
+var imgWidth=rotate.offsetWidth;
 // var left=my$("left")      找的代码中并没有这一行，(・∀・(・∀・(・∀・*)))？
 var right=my$("right");
 var pic=0;
@@ -65,13 +65,11 @@ onfocus = function(){
 }
 
 //左右焦点实现点击切换图片功能
-banner.onmouseover=function () {
+rotate.onmouseover=function () {
     arr.style.display="block";
-    clearInterval(timeId);
 };
-banner.onmouseout=function () {
+rotate.onmouseout=function () {
     arr.style.display="none";
-    timeId=setInterval(leftMove,timeId_time);
 };
 
 right.onclick=leftMove;

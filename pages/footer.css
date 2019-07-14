@@ -1,0 +1,49 @@
+#footer {
+	width: 100%;
+	height: 200px;
+	margin-top: 50px;
+	position: relative;
+}
+#footerbg {
+	filter: grayscale(100%) blur(2px) opacity(8%);  /*灰度，高斯模糊，透明度*/
+	position: absolute;
+	z-index: -99;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+#footerWrapper {
+	width: 900px;
+	height: 90px;
+	position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+#links {
+	width: 220px;
+	height: 90px;
+	float: left;
+}
+#links p {
+	color: blue;
+}
+#links a {
+	color: black;
+	font-size: small;
+}
+#links a:hover {
+	text-decoration:underline;
+}
+#cpright {
+	width: 670px;
+	height: 90px;
+	font-size: small;
+	float: left;
+	color: gray;
+	border-left: 2px solid;
+	padding-left: 8px;
+}
+#cpright a {
+	color: gray;
+}
