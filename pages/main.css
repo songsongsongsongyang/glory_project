@@ -33,7 +33,6 @@
 #rotate{
     width: 600px;
     height: 350px;
-	margin: 0 auto;
     position: relative;
     overflow: hidden;
     float: left;
@@ -47,6 +46,7 @@
 }
 #rotate img{
     width: 600px;
+    height: 350px;
     vertical-align: top;
 }
 #rotate ul li{
@@ -57,21 +57,20 @@
     height: 20px;
     right: 20px;
     bottom: 20px;
-    text-align: center;
-    padding: 5px;
 }
 #rotate ol li{
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
+    width: 10px;
+    height: 10px;
     background-color: #fff;
     margin: 5px;
+    border-radius: 50%;
     cursor: pointer;
     opacity: 0.5;
 }
 #rotate ol .current{
-    color: red;
+    background-color: red;
+    opacity: 1;
 }
 #arr{
     display: none;
@@ -157,7 +156,7 @@
     font-size: 15px;
     text-overflow: ellipsis; /*当文本溢出包含元素时显示省略符号来代表被修剪的文本*/
     white-space: nowrap; /*规定段落中的文本不进行换行*/
-    overflow: hidden; /*超出部分自动隐藏*/
+    overflow: hidden;
 }
 #newsBd li a:hover {
     text-decoration: underline;

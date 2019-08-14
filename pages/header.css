@@ -30,6 +30,6 @@ li {
 	padding-left: 20px;
 }
 #nav a:hover {
-	color: orange;
+	color: red;
 	background: linear-gradient(to bottom,rgba(255,222,173,0.5),rgba(255,222,173,0));
 }

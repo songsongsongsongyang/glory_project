@@ -5,21 +5,20 @@ function my$(id) {
 //获取各元素，方便操作
 var rotate=my$("rotate");
 var ulObj=rotate.children[0];
-var list=ulObj.children;
+var imgList=ulObj.children;
+var imgWidth=rotate.offsetWidth;
 var olObj=rotate.children[1];
 var arr=my$("arr");
-var imgWidth=rotate.offsetWidth;
+var left=my$("left");
 var right=my$("right");
 var pic=0;
 //设置
 var timeId_time=3000;
 
 //根据li个数，创建小按钮
-for(var i=0;i<list.length;i++){
+for(var i = 0;i<imgList.length;i++){
     var liObj=document.createElement("li");
-
     olObj.appendChild(liObj);
-    liObj.innerText=(i+1);
     liObj.setAttribute("index",i);
     //为按钮注册mouseover事件
     liObj.onmouseover=function () {
@@ -31,23 +30,14 @@ for(var i=0;i<list.length;i++){
         pic=this.getAttribute("index");
         animate(ulObj,-pic*imgWidth);
     }
-
 }
-
 
 //设置ol中第一个li有背景颜色
 olObj.children[0].className = "current";
 //克隆一个ul中第一个li,加入到ul中的最后
 ulObj.appendChild(ulObj.children[0].cloneNode(true));
-//计时器
+//计时器，自动切换
 var timeId=setInterval(leftMove,timeId_time);
-function stop(){  //计时器暂停
-    clearInterval(timeId);
-}
-function start(){  //计时器开始
-    clearInterval(timeId);
-    timeId=setInterval(leftMove,timeId_time);
-}
 // 当浏览器窗口切出或页面切换到其他页面一段时间再回来时，轮播效果会有短暂加速
 // （随切出时间加长而加长）。主要是因为虽然窗口切出去了，定时器依然在执行，但
 // 页面却没有将效果显示，所以切回来后会将之前的效果显示出来而加速轮播图。所以
@@ -60,6 +50,13 @@ onblur = function(){
 onfocus = function(){
     start();
 }
+function stop(){  //计时器暂停
+    clearInterval(timeId);
+}
+function start(){  //计时器开始
+    clearInterval(timeId);
+    timeId=setInterval(leftMove,timeId_time);
+}
 
 //左右焦点实现点击切换图片功能
 rotate.onmouseover=function () {
@@ -68,16 +65,15 @@ rotate.onmouseover=function () {
 rotate.onmouseout=function () {
     arr.style.display="none";
 };
-
 right.onclick=leftMove;
 function leftMove() {
-    if (pic == list.length - 1) {
+    if (pic == imgList.length - 1) {
         pic = 0;
         ulObj.style.left = 0 + "px";
     }
     pic++;
     animate(ulObj, -pic * imgWidth);
-    if (pic == list.length - 1) {
+    if (pic == imgList.length - 1) {
         olObj.children[olObj.children.length - 1].className = "";
         olObj.children[0].className = "current";
     } 
@@ -91,7 +87,7 @@ function leftMove() {
 }
 left.onclick=function () {
     if (pic==0){
-        pic=list.length-1;
+        pic=imgList.length-1;
         ulObj.style.left=-pic*imgWidth+"px";
     }
     pic--;
@@ -99,14 +95,12 @@ left.onclick=function () {
     for (var i = 0; i < olObj.children.length; i++) {
         olObj.children[i].removeAttribute("class");
     }
-    //当前的pic索引对应的按钮设置颜色
     olObj.children[pic].className = "current";
 };
 
 //设置任意的一个元素,移动到指定的目标位置
 function animate(element, target) {
-    clearInterval(element.timeId);     //不明白
-    //定时器的id值存储到对象的一个属性中
+    clearInterval(element.timeId);
     element.timeId = setInterval(function () {
         //获取元素的当前的位置,数字类型
         var current = element.offsetLeft;
